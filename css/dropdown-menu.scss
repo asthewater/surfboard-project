@@ -1,0 +1,35 @@
+
+.dropdowwn {
+    position: relative;
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.dropdown:hover .dropdown-menu {
+    right: 0;
+    opacity: 1;
+}
+
+.dropdown-menu {
+    position: absolute;
+    background: url(/images/menu-bg.png) no-repeat;
+    width: rem(273px);
+    height: rem(291px);
+    top: 100%;
+    opacity: 0;
+    transition: opacity .4s;
+    right: -9999px;
+    margin-bottom: 20px;
+
+    &:before {
+    content: "";
+    display: block;
+    height: 30px;
+    left: 0;
+    right: 0;
+    top: -30px;
+    position: absolute;
+    }
+}

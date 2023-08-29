@@ -1,0 +1,77 @@
+.products-section {
+    background: #F8FAF9;
+}
+.products-slider {
+    display: flex;
+
+}
+
+.product__container {
+    display: flex;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        flex: 1;
+    }
+}
+
+.product__col {
+    width: 50%;
+
+    @include tablets {
+        align-items: center;
+    }
+}
+
+.product__name {
+    font-size: rem(36px);
+    font-weight: bold;
+    color: $black;
+    text-transform: uppercase;
+    margin-bottom: rem(20px);
+}
+
+.product__description {
+    font-weight: 400;
+    margin-bottom: rem(20px);
+
+
+}
+
+.product__size {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+
+    @include tablets {
+        justify-content: center;
+    }
+}
+
+.product__size-length {
+    margin-right: rem(60px);
+}
+
+.product__price {
+    display: flex;
+    justify-content: space-between;
+
+    @include phones {
+        justify-content: space-around;
+    }
+}
+
+.product__price-number {
+    font-size: rem(60px);
+    color: #151515;
+    
+}
+
+.options {
+    width: rem(91px);
+    height: rem(91px);
+    margin-bottom: rem(40px);
+}

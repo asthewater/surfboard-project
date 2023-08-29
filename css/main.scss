@@ -1,0 +1,43 @@
+@import "media";
+
+$containerWidth: 940px;
+$baseFontSize: 18px;
+// breakpoints
+$tablets: 768px;
+$phones: 480px;
+
+// colors
+$yellow: #FEDB3F;
+$grey: #666666;
+$black: #292929;
+$white: #FFFFFF;
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css);
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;700;800&display=swap');
+@import "layout";
+@import "hero";
+@import "header";
+@import "features";
+@import "feature";
+@import "btn";
+@import "section";
+@import "headline";
+@import "benefits";
+@import "benefit";
+@import "reviews";
+@import "interactive-avatar";
+@import "form";
+@import "radio";
+@import "fixed-menu";
+@import "hamburger";
+@import "footer";
+@import "map-section";
+@import "socials";
+@import "contacts";
+@import "address";
+@import "team";
+@import "products";
+@import "dropdown-menu";
+@import "products-menu";
+@import "modal";
+@import "player";

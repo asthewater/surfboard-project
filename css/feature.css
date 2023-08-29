@@ -1,0 +1,16 @@
+.feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 90px;
+}
+
+.feature__icon {
+  width: 41px;
+  height: 41px;
+  margin-right: 7px;
+}
+
+.feature__text {
+  font-size: 16px;
+}

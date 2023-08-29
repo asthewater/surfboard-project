@@ -1,0 +1,30 @@
+.dropdowwn {
+  position: relative;
+}
+
+.dropdown:hover .dropdown-menu {
+  right: 0;
+  opacity: 1;
+}
+
+.dropdown-menu {
+  position: absolute;
+  background: url(/images/menu-bg.png) no-repeat;
+  width: rem(273px);
+  height: rem(291px);
+  top: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+  right: -9999px;
+  margin-bottom: 20px;
+}
+.dropdown-menu:before {
+  content: "";
+  display: block;
+  height: 30px;
+  left: 0;
+  right: 0;
+  top: -30px;
+  position: absolute;
+}

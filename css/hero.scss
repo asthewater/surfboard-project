@@ -1,0 +1,71 @@
+/* hero */
+
+.hero {
+    background: url(../images/bg.png) center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+
+    @include tablets {
+        background: url(../images/bg768.png);
+    }
+
+    @include phones {
+        background: url(../images/bg480.png);
+    }
+}
+  
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: rem(22px) 0 rem(60px);
+}
+
+.hero__title-section{
+  width: 52%;
+
+  @include tablets {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.hero__icons-section {
+    @include tablets {
+        display: none;
+    }
+}
+  
+.hero__main-title {
+    font-size: rem(48px);
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: rem(20px);
+    text-transform: uppercase;
+
+    @include phones {
+        font-size: rem(40px);
+    }
+    }
+  
+.hero__title-desc {
+    font-size: rem(21px);
+    margin-bottom: rem(51px);
+    padding-right: 10%;
+
+    @include tablets {
+        padding-right: 0;
+    }
+
+    @include phones {
+        padding-right: 0;
+    }
+}

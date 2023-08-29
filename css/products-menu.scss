@@ -1,0 +1,41 @@
+.products-menu-section {
+    position: relative;
+    background: url(/images/menu-bg-2.jpg) center center/center no-repeat;
+    color: #fff;
+}
+
+.products__menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+}
+
+.products-menu__item {
+    display: flex;
+}
+
+.products-menu__title {
+    position: relative;
+    width: rem(100px);
+
+    &:after {
+        content: "";
+        display: block;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        position: absolute;
+        background: rgba(51, 53, 55, 0.9);
+    }
+}
+
+.products-menu__content {
+    background: #333537E5;
+    width: 0;
+    position: relative;
+    overflow: hidden;
+    transition: width .7s;
+}
