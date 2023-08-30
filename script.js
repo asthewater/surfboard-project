@@ -225,6 +225,7 @@ function onYouTubeIframeAPIReady() {
       onReady: onPlayerReady,
       // 'onStateChange': onPlayerStateChange
     },
+
     playerVars: {
       controls: 0,
       disablekb: 0,
@@ -238,4 +239,81 @@ function onYouTubeIframeAPIReady() {
 
 eventsInit();
     
+// меню гармошка
+
+const mesureWidth = () => {
+  return 500;
+  }
+  
+  const closeEveryItemInContainer = container => {
+    const items = container.find(".products-menu__item");
+    const content = container.find(".products-menu__content");
+  
+    items.removeClass("active");
+    content.width(0);
+  }
+  
+  const openItems = item => {
+  const hiddenContent = item.find(".products-menu__content");
+  const reqWidth = mesureWidth();
+  item.addClass("active");
+  hiddenContent.width(reqWidth);
+  }
+  
+  $(".products-menu__title").on("click", e => {
+    e.preventDefault();
+    const $this = $(e.currentTarget);
+    const item = $this.closest(".products-menu__item");
+    const itemOpened = item.hasClass("active");
+    const container = $this.closest(".products__menu");
+  
+    if(itemOpened) {
+      closeEveryItemInContainer()
+    } else {
+      openItems(item);
+    }
+  });
+
+
+  // one page scroll
+
+  const sections = $("section");
+  const display = $("maincontent");
+
+  const performTransition = sectionEq => {
+    const position = sectionEq * -100;
+
+    display.css ({
+      transform: `translateY(${position}%)`
+    });
+  }
+
+  $(window).on("wheel", e => {
+    const deltaY = e.originalEvent.deltaY;
+
+    if (deltaY > 0) {
+      performTransition(2);
+      // next
+    }
+
+    if (deltaY < 0) {
+      // prev
+    }
+  });
+
+  // слайдер
+
+  const slider = $(".products").bxSlider({
+    pager: false,
+    controls: false
+  });
+
+  $(".product-slider__arrow--direction--prev").click(e => {
+    e.preventDefault();
+    slider.goToPrevSlide();
+  });
+  $(".product-slider__arrow--direction--next").click(e => {
+    e.preventDefault();
+    slider.goToNextSlide();
+  });
 

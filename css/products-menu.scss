@@ -1,6 +1,6 @@
 .products-menu-section {
     position: relative;
-    background: url(/images/menu-bg-2.jpg) center center/center no-repeat;
+    background: url(./images/menu-bg-2.jpg) center center/center no-repeat;
     color: #fff;
 }
 
@@ -18,24 +18,17 @@
 
 .products-menu__title {
     position: relative;
-    width: rem(100px);
-
-    &:after {
-        content: "";
-        display: block;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        position: absolute;
-        background: rgba(51, 53, 55, 0.9);
-    }
+    width: rem(102px);
 }
 
 .products-menu__content {
-    background: #333537E5;
+    background: rgba(51, 53, 55, 0.9);
     width: 0;
     position: relative;
     overflow: hidden;
     transition: width .7s;
+}
+
+.products-menu__container {
+    padding: 40px 73px 45px 26px;
 }
