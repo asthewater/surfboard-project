@@ -1087,9 +1087,17 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .product__col {
+    height: 50%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product__img {
+    width: 17.6666666667rem;
+    height: 23.1666666667rem;
   }
 }
 
@@ -1105,7 +1113,6 @@ footer {
   font-weight: 400;
   margin-bottom: 1.1111111111rem;
 }
-
 .product__size {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1137,12 +1144,9 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-@media screen and (max-width: 480px) {
-  .product__price {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .product__price-number {

@@ -47,7 +47,15 @@
     width: 50%;
 
     @include tablets {
+        height: 50%;
         align-items: center;
+    }
+}
+
+.product__img {
+    @include tablets {
+        width: rem(318px);
+        height: rem(417px);
     }
 }
 
@@ -63,6 +71,9 @@
     font-weight: 400;
     margin-bottom: rem(20px);
 
+    @include tablets {
+        
+    }
 
 }
 
@@ -84,10 +95,7 @@
 .product__price {
     display: flex;
     justify-content: space-between;
-
-    @include phones {
-        justify-content: space-around;
-    }
+    align-items: center;
 }
 
 .product__price-number {
